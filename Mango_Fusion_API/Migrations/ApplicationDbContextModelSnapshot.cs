@@ -130,7 +130,7 @@ namespace Mango_Fusion_API.Migrations
                             Id = 1,
                             Category = "Appetizer",
                             Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                            Image = "",
+                            Image = "images/spring_roll.jpg",
                             Name = "Spring Roll",
                             Price = 7.9900000000000002,
                             SpecialTag = ""
@@ -140,7 +140,7 @@ namespace Mango_Fusion_API.Migrations
                             Id = 2,
                             Category = "Appetizer",
                             Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                            Image = "",
+                            Image = "images/samosa.jpg",
                             Name = "Samosa",
                             Price = 8.9900000000000002,
                             SpecialTag = ""
@@ -150,7 +150,7 @@ namespace Mango_Fusion_API.Migrations
                             Id = 3,
                             Category = "Appetizer",
                             Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                            Image = "",
+                            Image = "images/soup.jpg",
                             Name = "Soup",
                             Price = 8.9900000000000002,
                             SpecialTag = "Best Seller"
@@ -160,7 +160,7 @@ namespace Mango_Fusion_API.Migrations
                             Id = 4,
                             Category = "Entrée",
                             Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                            Image = "",
+                            Image = "images/noodles.jpg",
                             Name = "Noodles",
                             Price = 10.99,
                             SpecialTag = ""
@@ -170,7 +170,7 @@ namespace Mango_Fusion_API.Migrations
                             Id = 5,
                             Category = "Entrée",
                             Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                            Image = "",
+                            Image = "images/pav_bhaji.jpg",
                             Name = "Pav Bhaji",
                             Price = 12.99,
                             SpecialTag = "Top Rated"
@@ -180,7 +180,7 @@ namespace Mango_Fusion_API.Migrations
                             Id = 6,
                             Category = "Entrée",
                             Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                            Image = "",
+                            Image = "images/pizza.jpg",
                             Name = "Paneer Pizza",
                             Price = 11.99,
                             SpecialTag = ""
@@ -190,7 +190,7 @@ namespace Mango_Fusion_API.Migrations
                             Id = 7,
                             Category = "Dessert",
                             Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                            Image = "",
+                            Image = "images/mango_paradise.jpg",
                             Name = "Mango Paradise",
                             Price = 13.99,
                             SpecialTag = "Chef's Special"
@@ -200,7 +200,7 @@ namespace Mango_Fusion_API.Migrations
                             Id = 8,
                             Category = "Dessert",
                             Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                            Image = "",
+                            Image = "images/carrot_love.jpg",
                             Name = "Carrot Love",
                             Price = 4.9900000000000002,
                             SpecialTag = ""
@@ -210,7 +210,7 @@ namespace Mango_Fusion_API.Migrations
                             Id = 9,
                             Category = "Dessert",
                             Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
-                            Image = "",
+                            Image = "images/sweet_rolls.jpg",
                             Name = "Sweet Rolls",
                             Price = 4.9900000000000002,
                             SpecialTag = "Chef's Special"
