@@ -91,6 +91,134 @@ namespace Mango_Fusion_API.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("Mango_Fusion_API.Models.MenuItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<string>("SpecialTag")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MenuItems");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Category = "Appetizer",
+                            Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            Image = "",
+                            Name = "Spring Roll",
+                            Price = 7.9900000000000002,
+                            SpecialTag = ""
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Category = "Appetizer",
+                            Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            Image = "",
+                            Name = "Samosa",
+                            Price = 8.9900000000000002,
+                            SpecialTag = ""
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Category = "Appetizer",
+                            Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            Image = "",
+                            Name = "Soup",
+                            Price = 8.9900000000000002,
+                            SpecialTag = "Best Seller"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Category = "Entrée",
+                            Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            Image = "",
+                            Name = "Noodles",
+                            Price = 10.99,
+                            SpecialTag = ""
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Category = "Entrée",
+                            Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            Image = "",
+                            Name = "Pav Bhaji",
+                            Price = 12.99,
+                            SpecialTag = "Top Rated"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Category = "Entrée",
+                            Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            Image = "",
+                            Name = "Paneer Pizza",
+                            Price = 11.99,
+                            SpecialTag = ""
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Category = "Dessert",
+                            Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            Image = "",
+                            Name = "Mango Paradise",
+                            Price = 13.99,
+                            SpecialTag = "Chef's Special"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Category = "Dessert",
+                            Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            Image = "",
+                            Name = "Carrot Love",
+                            Price = 4.9900000000000002,
+                            SpecialTag = ""
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Category = "Dessert",
+                            Description = "Fusc tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
+                            Image = "",
+                            Name = "Sweet Rolls",
+                            Price = 4.9900000000000002,
+                            SpecialTag = "Chef's Special"
+                        });
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
