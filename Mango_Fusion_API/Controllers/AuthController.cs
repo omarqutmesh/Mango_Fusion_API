@@ -1,13 +1,17 @@
 ﻿using Mango_Fusion_API.Models;
 using Mango_Fusion_API.Models.Dto;
+using Mango_Fusion_API.Utility;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace Mango_Fusion_API.Controllers
+namespace MangoFusion_API.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class AuthController : Controller
     {
+
         private readonly ApiResponse _response;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
@@ -20,6 +24,8 @@ namespace Mango_Fusion_API.Controllers
             _userManager = userManager;
             _roleManager = roleManager;
         }
+
+        [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterRequestDTO model)
         {
             if (ModelState.IsValid)
@@ -35,6 +41,21 @@ namespace Mango_Fusion_API.Controllers
                 var result = await _userManager.CreateAsync(newUser, model.Password);
                 if (result.Succeeded)
                 {
+                    if (!_roleManager.RoleExistsAsync(SD.Role_Admin).GetAwaiter().GetResult())
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(SD.Role_Admin));
+                        await _roleManager.CreateAsync(new IdentityRole(SD.Role_Customer));
+                    }
+
+                    if (model.Role.Equals(SD.Role_Admin, StringComparison.CurrentCultureIgnoreCase))
+                    {
+                        await _userManager.AddToRoleAsync(newUser, SD.Role_Admin);
+                    }
+                    else
+                    {
+                        await _userManager.AddToRoleAsync(newUser, SD.Role_Customer);
+                    }
+
                     _response.StatusCode = HttpStatusCode.OK;
                     _response.IsSuccess = true;
                     return Ok(_response);
@@ -65,5 +86,6 @@ namespace Mango_Fusion_API.Controllers
             }
 
         }
+
     }
 }
