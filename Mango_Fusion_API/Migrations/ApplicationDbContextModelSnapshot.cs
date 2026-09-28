@@ -241,6 +241,9 @@ namespace Mango_Fusion_API.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
+                    b.Property<int?>("Rating")
+                        .HasColumnType("int");
+
                     b.HasKey("OrderDetailId");
 
                     b.HasIndex("MenuItemId");
